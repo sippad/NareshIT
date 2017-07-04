@@ -1,7 +1,6 @@
 package edu.hyd.test;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import edu.hyd.beans.MyServletContainer;
@@ -18,7 +17,7 @@ public class ClientApp {
 		container.processRequest("First Request");
 		container.processRequest("Second Request");
 		System.out.println("Container Class : "+container.getClass());
-		((AbstractApplicationContext) ctx).close();
+		((ClassPathXmlApplicationContext) ctx).close();
 		
 		
 	}

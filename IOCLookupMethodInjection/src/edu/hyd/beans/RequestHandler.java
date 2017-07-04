@@ -12,13 +12,13 @@ public class RequestHandler {
 	
 //	Constructor
 	public RequestHandler(){
-		System.out.println(" RequestHandler > constructor");
 		count++;
+		System.out.println(" RequestHandler > constructor");		
 	}
 	
 	public void handle(String data){
 		System.out.println(" RequestHandler > handle(String data)");
-		System.out.println("Handling request no."+count+" with data "+data);
+		System.out.println("Handling request no."+count+" with "+data);
 	}
 
 //	
