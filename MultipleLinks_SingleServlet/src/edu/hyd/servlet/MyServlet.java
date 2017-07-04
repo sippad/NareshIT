@@ -24,7 +24,9 @@ public class MyServlet extends HttpServlet {
 		Locale locale[]=null;			
 		
 		response.setContentType("text/html");
+		pw=response.getWriter();
 		param = request.getParameter("p");
+		
 		if(param.equals("countries")){
 			locale= Locale.getAvailableLocales();
 			for(Locale l : locale){
