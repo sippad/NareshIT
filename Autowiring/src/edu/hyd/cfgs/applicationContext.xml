@@ -35,9 +35,5 @@
  -->
  
  <bean id="travelAgent" class="edu.hyd.beans.TravelAgent" autowire="byType"/>    				  	   
- 	 
-   			
-  		
-               	   
-        
+ 	    
 </beans>

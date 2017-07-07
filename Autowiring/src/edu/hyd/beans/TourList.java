@@ -9,6 +9,7 @@ public class TourList {
 	public void setPlaces(String[] places) {
 		this.places = places;		
 	}
+	
 	@Override
 	public String toString() {
 		return "TourList : places=" + Arrays.toString(places);
