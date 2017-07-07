@@ -4,14 +4,14 @@ public class TravelAgent {
 	
 	private TourList tl;
 	
-	TravelAgent(){
+/*	TravelAgent(){
 		System.out.println("TravelAgent > 0 param Contructor");
-	}
+	}*/
 	
-	TravelAgent(TourList tl){
+/*	TravelAgent(TourList tl){
 		this.tl=tl;
 		System.out.println("TravelAgent > 1 param Constructor");
-	}
+	}*/
 	
 	public void setTl(TourList tl) {
 		this.tl = tl;
@@ -20,7 +20,7 @@ public class TravelAgent {
 	
 	@Override
 	public String toString() {
-		return "TravelAgent [tl=" + tl + "]";
+		return "TravelAgent > " + tl;
 	}
 	
 }

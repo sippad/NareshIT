@@ -19,6 +19,7 @@ public class ClientApp {
 		reader = new XmlBeanDefinitionReader(factory);
 		reader.loadBeanDefinitions(new FileSystemResource("src/edu/hyd/cfgs/applicationContext.xml"));
 		ta = factory.getBean("travelAgent",TravelAgent.class);
+		System.out.println(ta);
 	
 	}
 }

@@ -11,7 +11,7 @@ public class TourList {
 	}
 	@Override
 	public String toString() {
-		return "TourList [places=" + Arrays.toString(places) + "]";
+		return "TourList : places=" + Arrays.toString(places);
 	}	
 	
 }

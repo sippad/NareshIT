@@ -8,21 +8,36 @@
     	<property name="places">
     		<list>
     			<value>Delhi</value>
-    			<value>Similar</value>
+    			<value>Mumbai</value>
     		</list>
     	</property>
     </bean>
     
-<!--     <bean id="tourList2" class="edu.hyd.beans.TourList">
+     <bean id="tourList2" class="edu.hyd.beans.TourList">
     	 <property name="places">
     	 	<list>
     	 		<value>New York</value>
-    	 		<value>Goa</value>
+    	 		<value>Los Angeles</value>
     	 	</list>
     	 </property>
     </bean>
-     -->
 
-    <bean id="travelAgent" class="edu.hyd.beans.TravelAgent" autowire="byType"/>        	   
+
+  <!--   <bean id="travelAgent" class="edu.hyd.beans.TravelAgent" autowire="constructor"/>  
+  			
+  			Executes Default 0 param Constructor, returns null object   
+  -->  
+  
+ <!--  <bean id="travelAgent" class="edu.hyd.beans.TravelAgent" autowire="constructor">  
+  			<constructor-arg ref="tourList1"/>  	
+  	    </bean>
+ 	Executes 1 param constructor and inject the bean object of given reference 
+ -->
+ 
+ <bean id="travelAgent" class="edu.hyd.beans.TravelAgent" autowire="byType"/>    				  	   
+ 	 
+   			
+  		
+               	   
         
 </beans>
