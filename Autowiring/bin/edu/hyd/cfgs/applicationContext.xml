@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="tourList1" class="edu.hyd.beans.TourList">
+     <bean id="tourList1" class="edu.hyd.beans.TourList">
     	<property name="places">
     		<list>
     			<value>Delhi</value>
@@ -13,7 +13,7 @@
     	</property>
     </bean>
     
-     <bean id="tourList2" class="edu.hyd.beans.TourList">
+ <!--      <bean id="tourList2" class="edu.hyd.beans.TourList">
     	 <property name="places">
     	 	<list>
     	 		<value>New York</value>
@@ -21,19 +21,26 @@
     	 	</list>
     	 </property>
     </bean>
-
+  -->
 
   <!--   <bean id="travelAgent" class="edu.hyd.beans.TravelAgent" autowire="constructor"/>  
-  			
-  			Executes Default 0 param Constructor, returns null object   
+ 	
+ 		If single bean class object : Inject that class in the target class
+ 		If two bean object of same type, it will give no error but return the "null" object   			
+    	and Executes Default 0 param Constructor   
   -->  
   
  <!--  <bean id="travelAgent" class="edu.hyd.beans.TravelAgent" autowire="constructor">  
   			<constructor-arg ref="tourList1"/>  	
   	    </bean>
- 	Executes 1 param constructor and inject the bean object of given reference 
+ 		
+ 		Executes : 1 param constructor and inject the bean class object of specified reference. 
  -->
  
- <bean id="travelAgent" class="edu.hyd.beans.TravelAgent" autowire="byType"/>    				  	   
- 	   
+  <bean id="travelAgent" class="edu.hyd.beans.TravelAgent" autowire="byType"/>
+ <!--
+ Error :	Since there are two beans with the same object type i.e. tourList1,tourList2
+  			it will throw an error "Expected single matching but Found 2" 
+ -->    			
+ 	  	    	   
 </beans>
