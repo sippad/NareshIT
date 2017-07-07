@@ -8,7 +8,7 @@ public abstract class MyServletContainer {
 	public void processRequest(String data){
 		System.out.println("MyServletContainer > processRequest(String data)");
 		RequestHandler reqHandler= getRequestHandler();
-		System.out.println("Request Handler Object created by proxy class");
+//		System.out.println("Request Handler Object created by proxy class");
 		reqHandler.handle(data);
 	}
 	
