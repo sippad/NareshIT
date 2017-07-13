@@ -42,5 +42,7 @@
  Error :	Since there are two beans with the same object type i.e. tourList1,tourList2
   			it will throw an error "Expected single matching but Found 2" 
  -->    			
+ 
+ <context : component-scan base-package="edu.hyd"></context>
  	  	    	   
 </beans>
