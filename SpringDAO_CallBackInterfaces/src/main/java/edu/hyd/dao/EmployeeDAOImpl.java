@@ -54,7 +54,7 @@ public EmployeeBO getEmployeeById(int no) throws Exception{
 				
 				//Copy database values to BO object using constructor and add BO object to the list.				
 				
-				List<EmployeeBO> list = new ArrayList<EmployeeBO>();
+				List<EmployeeBO> list = new ArrayList();
 				while(rs.next()){
 				EmployeeBO bo = new EmployeeBO(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getLong(4));
 				list.add(bo);
