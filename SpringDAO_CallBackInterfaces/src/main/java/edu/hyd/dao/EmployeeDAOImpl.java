@@ -60,10 +60,8 @@ public EmployeeBO getEmployeeById(int no) throws Exception{
 				list.add(bo);
 				}
 				return list;
-			}
-		
+			}		
 		});
 		return list;
 	}
-
 }
