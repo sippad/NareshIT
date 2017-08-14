@@ -22,8 +22,7 @@
 				<value>cacheAdvice</value>
 				<value>logAroundAdvice</value>
 			</list>
-		</property>
-		
+		</property>		
 	</bean>
 
 	<bean id="factory2" class="org.springframework.aop.framework.ProxyFactoryBean">

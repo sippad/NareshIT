@@ -26,8 +26,7 @@ public class Client {
 		System.out.println("\n\nIntrresult : "+interest);
 		System.out.println(" Rectangle area : "+area);
 		System.out.println("SqResult :: "+Sqresult);
-		
-		
+				
 		System.out.println("Exiting main method");
 		((AbstractApplicationContext) ctx).close();
 	}
