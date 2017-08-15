@@ -2,8 +2,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
-   
-<bean id="securityAdvice" class="edu.hyd.aspect"/>
-<bean id="" class=""/>
+
+	<import resource="persistence-config.xml" />
+	<import resource="service-config.xml" />
 
 </beans>

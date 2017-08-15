@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Target class -->
+	<bean id="IntrAmtCalc" class="edu.hyd.service.IntrAmtCalc" />
+
+	<!-- Service class -->
+	<bean id="authService" class="edu.hyd.service.AuthService">
+		<property name="dao" ref="authDAO" />
+	</bean>
+
+	<!-- Aspect class -->
+	<bean id="securityAdvice" class="edu.hyd.aspect.SecurityAdvice">
+		<property name="authService" ref="authService" />
+	</bean>
+
+	<!-- ProxyFactory class -->
+	<bean id="proxyFactory" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="IntrAmtCalc" />
+		<property name="interceptorNames">
+			<list>
+				<value>securityAdvice</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
