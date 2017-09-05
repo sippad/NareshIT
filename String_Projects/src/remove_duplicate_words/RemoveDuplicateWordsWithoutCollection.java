@@ -9,17 +9,12 @@ public class RemoveDuplicateWordsWithoutCollection {
 	static int len;
 	static String words[];
 
-	/*
-	 * public static void main(String[] args) { 
-	 * remove();
-	 * }
-	 */
-
 	public static String remove(String sentence) {
-		Scanner sc = new Scanner(System.in);		
+		Scanner sc = new Scanner(System.in);
 		StringBuffer sb = new StringBuffer();
 		System.out.println(" Remove duplicate words from string \n -------------------------");
-		System.out.print(" Enter a simple string with repeated words without special characters : ");				
+		System.out.print(" Enter a simple string with repeated words without special characters : ");
+
 		words = sentence.split(" ");
 		len = words.length;
 		for (int i = 0; i < len; i++) {
@@ -44,6 +39,5 @@ public class RemoveDuplicateWordsWithoutCollection {
 		// LinkedHashSet -> because it stores unique values in insertion order.
 		// how are you are you ok
 		// how are are are you you you
-
 	}
 }
