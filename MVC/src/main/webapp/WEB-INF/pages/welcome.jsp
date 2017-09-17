@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Welcome page</title>
 </head>
 <body>
-<a href="/result.jsp">Current Date</a>
+	<a href="result.html">Current Date</a>
 </body>
 </html>

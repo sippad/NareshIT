@@ -6,18 +6,19 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 	
 	<bean id="wc" class="com.nit.controller.WelcomeController"/>	
-	
+	<bean id="rc" class="com.nit.controller.ResultController"/>
 	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<!-- <property name="UrlMap">
 			<map>
 				<entry key="welcome.html" value="wc"></entry>											
 			</map>
 		</property> 
-				OR		
+				OR
 		-->
 		<property name="mappings">
 			<props>
 				<prop key="welcome.html">wc</prop>
+				<prop key="result.html">rc</prop>
 			</props>
 		</property>
 	</bean>
