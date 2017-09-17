@@ -27,10 +27,10 @@ public class CountOccurence_SortDescInOrderOfOccurence {
 			}//inner for
 			count[i]=occur;
 			occur=1;			
-		}				
+		}		
 		for(int i=0; i<len;i++){
 			if(ch[i]!=' '){
-				
+				sb.append(ch[i] + ":" + count[i] + " ");	
 			}			
 		}
 		return sb.toString();		

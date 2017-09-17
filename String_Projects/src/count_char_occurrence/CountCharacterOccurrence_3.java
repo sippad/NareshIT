@@ -3,7 +3,7 @@ package count_char_occurrence;
 import java.util.Scanner;
 
 
-public class CountCharacterOccurrence_1 {
+public class CountCharacterOccurrence_3 {
 	
 	public static void main(String[] args) {
 		System.out.println(count("how AreeEE yOU ARE H"));

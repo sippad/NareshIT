@@ -6,7 +6,8 @@ import org.junit.Test;
 
 public class Test_CountCharacterOccurence {
 
-	CountCharacterOccurrence_1 testclass1;
+	CountCharacterOccurrence_3 testclass1;
+	CountCharacterOccurrence_2 testClass2;
 	
 	String input;
 	String expected;
@@ -15,6 +16,7 @@ public class Test_CountCharacterOccurence {
 		input="how are you";
 		expected="h:1 o:2 w:1 a:1 r:1 e:1 y:1 u:1";
 		assertEquals("Result", expected, testclass1.count(input));
+		assertEquals("Result", expected, testClass2.count(input));
 	}
 	
 	@Test
