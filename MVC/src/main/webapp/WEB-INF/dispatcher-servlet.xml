@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id="wc" class="com.nit.controller.WelcomeController"/>	
+	
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<!-- <property name="UrlMap">
+			<map>
+				<entry key="welcome.html" value="wc"></entry>											
+			</map>
+		</property> 
+				OR		
+		-->
+		<property name="mappings">
+			<props>
+				<prop key="welcome.html">wc</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+	 p:prefix="/WEB-INF/pages/"
+	 p:suffix=".jsp"
+	/>
+	
+</beans>
