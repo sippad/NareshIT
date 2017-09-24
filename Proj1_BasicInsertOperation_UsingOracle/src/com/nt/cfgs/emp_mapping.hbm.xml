@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="org.hibernate.test.ops"
+	xmlns="http://www.hibernate.org/xsd/hibernate-mapping"
+	xsi:schemaLocation="http://www.hibernate.org/xsd/hibernate-mapping hibernate-mapping-4.0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<class name="com.nt.entity.Employee" table="employee">
+		<id name="no" column="eno">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="ename" />
+		<property name="desg" column="desg" />
+		<property name="sal" column="salary" />
+	</class>
+</hibernate-mapping>
