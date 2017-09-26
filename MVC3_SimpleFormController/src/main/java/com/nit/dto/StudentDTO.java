@@ -1,0 +1,38 @@
+package com.nit.dto;
+
+import java.io.Serializable;
+
+public class StudentDTO implements Serializable{
+	
+	private static final long serialVersionUID = 8640417769610780168L;
+	private int sno;
+	private String sname;
+	private int smob;
+	private String sadd;
+
+	public int getSno() {
+		return sno;
+	}
+	public void setSno(int sno) {
+		this.sno = sno;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public int getSmob() {
+		return smob;
+	}
+	public void setSmob(int smob) {
+		this.smob = smob;
+	}
+	public String getSadd() {
+		return sadd;
+	}
+	public void setSadd(String sadd) {
+		this.sadd = sadd;
+	}
+		
+}

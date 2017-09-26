@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+			
+	<bean id="formController" class="com.nit.controller.StudentInsertController">
+		<property name="formView" value="register_student"/>
+		<property name="successView" value="result"/>
+		<property name="commandClass" value="com.nit.command.StudentCommand"/>
+		<property name="commandName" value="stCmd"/>
+		<property name="sessionForm" value="true"/>
+		<property name="service" ref="stService"/>		
+	</bean>
+	
+	<bean id="requestHandlerMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="register_student.htm">formController</prop>
+					
+			</props>
+		</property>
+	</bean>
+		
+	
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+</beans>
