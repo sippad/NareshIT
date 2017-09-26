@@ -13,16 +13,18 @@ import org.w3c.dom.views.AbstractView;
 public class WelcomeController implements Controller{ 
                     //extends AbstractController
 
-	@Override
-	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {		
-		return new ModelAndView("welcome");
-	}
+	
 
 /*	@Override
 	protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		return new ModelAndView("welcome","sysDate",new Date());
+
 		
 	}*/
+
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// TODO Auto-generated method stub
+		return new ModelAndView("welcome","sysDate",new Date());
+	}
 
 }

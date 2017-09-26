@@ -10,7 +10,6 @@ import org.springframework.web.servlet.mvc.Controller;
 
 public class ResultController implements Controller {
 
-	@Override
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {	
 		return new ModelAndView("result","sysDate",new Date());
 	}
