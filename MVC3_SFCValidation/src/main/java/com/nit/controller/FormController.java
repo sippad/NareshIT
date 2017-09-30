@@ -11,7 +11,7 @@ import com.nit.command.StCommand;
 import com.nit.dto.StudentDTO;
 import com.nit.service.RegistrationService;
 
-public class FormController extends SimpleFormController {
+public class FormController extends SimpleFormController{
 	private RegistrationService service;
 
 	public void setService(RegistrationService service) {
