@@ -2,15 +2,14 @@ package com.nit.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.validation.BindException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.SimpleFormController;
-
 import com.nit.command.StCommand;
 import com.nit.dto.StudentDTO;
 import com.nit.service.RegistrationService;
 
+@SuppressWarnings("deprecation")
 public class FormController extends SimpleFormController{
 	private RegistrationService service;
 

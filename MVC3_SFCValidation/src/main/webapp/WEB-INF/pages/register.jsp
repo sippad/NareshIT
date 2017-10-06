@@ -14,7 +14,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student Registration Form</title>
 </head>
-<body align="center">
+<body>
+	<h1>STUDENT FORM VALIDATION</h1>
 	<form:form method="POST" commandName="stCmd">
 		Student number : <form:input path="sno" /><font><form:errors path="sno"/></font><br><br>
 		Student name : <form:input path="sname"/><font><form:errors path="sname"/></font><br><br>

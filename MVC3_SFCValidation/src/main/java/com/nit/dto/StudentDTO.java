@@ -3,6 +3,8 @@ package com.nit.dto;
 import java.io.Serializable;
 
 public class StudentDTO implements Serializable{
+
+	private static final long serialVersionUID = 8050509980779560279L;
 	int sno;
 	String sname;
 	long mobile;

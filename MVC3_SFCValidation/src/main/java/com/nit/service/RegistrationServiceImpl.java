@@ -1,9 +1,6 @@
 package com.nit.service;
 
-import javax.imageio.spi.RegisterableService;
-
 import org.springframework.beans.BeanUtils;
-
 import com.nit.bo.StudentBO;
 import com.nit.dao.RegistrationDAO;
 import com.nit.dto.StudentDTO;
