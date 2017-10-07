@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+	<hibernate-mapping>	
+		<class name="com.nit.domain.CouponDetails"> 
+			<id name="coupon_no" type="string" length="30">
+				<generator class="com.nit.generator.CouponNoGenerator">
+				</generator>				
+			</id>
+			<property name="cust_name" type="string" length="50"/>
+			<property name="bill_amt" type="float"/>
+			<property name="purchase_date" type="date"/>
+		</class>
+	</hibernate-mapping>
