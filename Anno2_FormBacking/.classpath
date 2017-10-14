@@ -28,7 +28,5 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Setups/apache-tomcat-9.0.0.M21-windows-x64_2/lib/catalina.jar"/>
-	<classpathentry kind="lib" path="D:/Setups/apache-tomcat-9.0.0.M21-windows-x64_2/lib/jasper.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
