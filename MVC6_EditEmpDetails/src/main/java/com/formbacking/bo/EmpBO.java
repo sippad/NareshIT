@@ -29,5 +29,9 @@ public class EmpBO {
 	}
 	public void setSal(int sal) {
 		this.sal = sal;		
+	}
+	@Override
+	public String toString() {
+		return "EmpBO [eno=" + eno + ", ename=" + ename + ", desg=" + desg + ", sal=" + sal + "]";
 	} 
 }

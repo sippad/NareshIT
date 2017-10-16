@@ -4,7 +4,7 @@
 	xmlns:beans = "http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 		
 	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
@@ -13,13 +13,26 @@
 				<prop key="welcome.htm">welcome</prop>
 				<prop key="list_emp.htm">listEmp</prop>
 				<prop key="delete.htm">deleteEmp</prop>
+				<prop key="register.htm">registerEmp</prop>
 				<prop key="edit.htm">editEmp</prop>				
 			</props>
 		</property>
 	</bean>
 	
+	<bean id="registerEmp" class="com.formbacking.controller.InsertController">
+		<property name="service" ref="empService"/>
+		<property name="formView" value="register"/>
+		<property name="commandClass" value="com.formbacking.command.EmpCommand"/>
+		<property name="commandName" value="command"/>
+		<property name="sessionForm" value="true"/>
+	</bean>
+	
 	<bean id="editEmp" class="com.formbacking.controller.UpdateController">
 		<property name="service" ref="empService"/>
+		<!-- <property name="formView" value="register"/> -->
+		<property name="commandClass" value="com.formbacking.command.EmpCommand"/>
+		<property name="commandName" value="command"/>
+		<property name="sessionForm" value="true"/>		
 	</bean>
 	
 	<bean id="deleteEmp" class="com.formbacking.controller.DeleteEmpController">

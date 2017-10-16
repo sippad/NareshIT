@@ -34,5 +34,25 @@ public class EmpServiceImpl implements EmpService{
 	public int removeEmp(int empNo) {
 		return dao.deleteEmp(empNo);
 	}
-		
+	
+	public EmpDTO getEmp(int empNo) {
+		EmpDTO dto= new EmpDTO();
+		EmpBO bo= dao.selectEmp(empNo);		
+		BeanUtils.copyProperties(bo,dto);
+		return dto;
+	}
+	
+	public int register(EmpDTO dto) {
+		EmpBO bo = new EmpBO();
+		BeanUtils.copyProperties(dto,bo);		
+		return dao.insertEmp(bo);
+	}
+
+	@Override
+	public int update(EmpDTO dto) {
+		EmpBO bo = new EmpBO();
+		BeanUtils.copyProperties(dto,bo);		
+		return dao.UpdateEmp(bo);
+
+	}
 }

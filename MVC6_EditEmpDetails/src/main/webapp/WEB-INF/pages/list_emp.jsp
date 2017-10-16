@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>List Employee</title>
+<!-- <title>List Employee</title> -->
 </head>
 <body>
-	<h2> List of all employees </h2>
-	${delStatus}	
+	<!-- <h2> List of all employees </h2> -->
+<%-- 	${delStatus} --%>	
 <table><tr><td>Emp NO</td><td>Emp Name</td><td>Emp desg</td><td>Salary</td></tr>
 <c:forEach var="emp" items="${listEmp}">
 	<tr>
@@ -21,7 +21,7 @@
 	<td><a href="delete.htm?id=${emp.eno}">Delete</a></td>
 	<tr>
 </c:forEach>
-</table>
+</table>	
 <a href="register.htm">Insert new record</a>
 </body>
 </html>	

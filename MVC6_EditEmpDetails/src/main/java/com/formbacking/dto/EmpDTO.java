@@ -31,5 +31,10 @@ public class EmpDTO implements Serializable {
 	}
 	public void setSal(int sal) {
 		this.sal = sal;		
+	}
+	@Override
+	public String toString() {
+		return "EmpDTO [eno=" + eno + ", ename=" + ename + ", desg=" + desg + ", sal=" + sal + "]";
 	} 
+	
 }
