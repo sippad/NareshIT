@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean id="mobile" class="com.nt.beans.Mobile">
+		<property name="brandName" value="SAMSUNG" />
+		<property name="model" value="S4" />
+	</bean>
+	
+	<bean id="mobile1" class="com.nt.beans.Mobile">
+		<property name="brandName" value="SAMSUNG" />
+		<property name="model" value="S4" />
+	</bean>
+</beans>
