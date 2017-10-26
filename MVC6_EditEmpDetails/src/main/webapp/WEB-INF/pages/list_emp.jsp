@@ -9,7 +9,10 @@
 </head>
 <body>
 	<!-- <h2> List of all employees </h2> -->
-<%-- 	${delStatus} --%>	
+${delStatus} <br>
+${insertStatus} <br>
+${updateStatus}<br>
+
 <table><tr><td>Emp NO</td><td>Emp Name</td><td>Emp desg</td><td>Salary</td></tr>
 <c:forEach var="emp" items="${listEmp}">
 	<tr>

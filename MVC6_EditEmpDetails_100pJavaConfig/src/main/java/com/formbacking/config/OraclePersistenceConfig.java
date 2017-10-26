@@ -10,7 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Configuration
 @ComponentScan(basePackages="com.formbacking.dao")
-public class PersistenceConfig {
+public class OraclePersistenceConfig {
 	
 	
 	@Bean

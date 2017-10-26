@@ -10,6 +10,6 @@
 </head>
 <body>
 <h1>STUDENT PAGE</h1>
-<a href="SpringSecurity_Standalone/j_spring_security_logout">Logout</a>
+<a href="../j_spring_security_logout">Logout</a>
 </body>
 </html>

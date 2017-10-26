@@ -47,7 +47,8 @@ public class InsertController extends SimpleFormController{
 		RedirectView view = null;
 		
 		BeanUtils.copyProperties(command,dto);
-		int insertStatus = service.register(dto);				
+		int insertStatus = service.register(dto);
+		mav.addObject("insertStatus",insertStatus);
 		
 		view = new RedirectView("list_emp.htm");
 		view.setExposeModelAttributes(false);

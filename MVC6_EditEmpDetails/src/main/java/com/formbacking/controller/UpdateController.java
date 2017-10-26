@@ -56,12 +56,12 @@ public class UpdateController extends SimpleFormController{
 		int eno = Integer.parseInt(request.getParameter("id"));
 		dto.setEno(eno);
 		int status =service.update(dto);		
-		String insertStatus = status==0? "Update Failed" : dto.getEno()+" record updated" ;
+		String updateStatus = status==0? "Update Failed" : dto.getEno()+" record updated" ;
 		
 		view = new RedirectView("list_emp.htm");
 		view.setExposeModelAttributes(false);
 		mav.setView(view);
-		mav.addObject("insertStatus",insertStatus);
+		mav.addObject("updateStatus",updateStatus);
 		return mav;
 	}
 }
