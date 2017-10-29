@@ -22,14 +22,14 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	public void setHt(HibernateTemplate ht) {
 		this.ht = ht;
 	}
-
+	
 	/* ALL INSERT OPERATIONS */
 
 	@Override
 	public int insertEmployee(Employee hlo) {
 		return (int) ht.save(hlo);
 	}
-
+	
 	/* ALL DELETE OPERATIONS */
 
 	@Override
