@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
-		
-	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:sys"/>
-		<property name="username" value="Asif123"/>
-		<property name="password" value="Asif123"/>
+
+	<bean id="ds"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:sys" />
+		<property name="username" value="Asif123" />
+		<property name="password" value="Asif123" />
 	</bean>
-	
+
 	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
-		<property name="dataSource" ref="ds"/>
+		<property name="dataSource" ref="ds" />
 	</bean>
-	
+
+	<bean id="selectEmpReplacer" class="com.formbacking.dao.SelectEmpReplacer">
+		<property name="jt" ref="jt" />
+	</bean>
+
+	<bean id="selectAllEmpReplacer" class="com.formbacking.dao.SelectAllEmpReplacer">
+		<property name="jt" ref="jt" />
+	</bean>
+
 	<bean id="empDAO" class="com.formbacking.dao.EmpDAOImpl">
-		<property name="jt" ref="jt"/>
+		<property name="jt" ref="jt" />
+		<replaced-method name="selectAllEmp" replacer="selectAllEmpReplacer" />
+		<replaced-method name="selectEmp" replacer="selectEmpReplacer">
+			<arg-type>int</arg-type>
+		</replaced-method>
 	</bean>
-	
+
 	<bean id="empService" class="com.formbacking.service.EmpServiceImpl">
-		<property name="dao" ref="empDAO"/>
-	</bean>	
+		<property name="dao" ref="empDAO" />
+	</bean>
 
 </beans>
