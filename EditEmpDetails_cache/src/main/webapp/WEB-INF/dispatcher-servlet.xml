@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans = "http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+		
+	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="welcome.htm">welcome</prop>
+				<prop key="list_emp.htm">listEmp</prop>
+				<prop key="delete.htm">deleteEmp</prop>
+				<prop key="register.htm">registerEmp</prop>
+				<prop key="edit.htm">editEmp</prop>				
+			</props>
+		</property>
+	</bean>
+	
+	
+	<bean id="registerEmp" class="com.formbacking.controller.InsertController">
+		<property name="service" ref="empService"/>
+		<property name="formView" value="register"/>
+		<property name="commandClass" value="com.formbacking.command.EmpCommand"/>
+		<property name="commandName" value="command"/>
+		<property name="sessionForm" value="true"/>
+		<property name="validator" ref="formValidator"/>
+	</bean>
+	
+	<bean id="editEmp" class="com.formbacking.controller.UpdateController">
+		<property name="service" ref="empService"/>
+		<!-- <property name="formView" value="register"/> -->
+		<property name="commandClass" value="com.formbacking.command.EmpCommand"/>
+		<property name="commandName" value="command"/>
+		<property name="sessionForm" value="true"/>		
+	</bean>
+	
+	<bean id="deleteEmp" class="com.formbacking.controller.DeleteEmpController">
+		<property name="service" ref="empService"/>
+	</bean>
+		
+	<bean id="welcome" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="welcome"/>
+	</bean>
+
+	<bean id="listEmp" class="com.formbacking.controller.EmpController">
+		<property name="service" ref="empService"/>
+	</bean>
+	
+	<bean id="formValidator" class="com.formbacking.validator.FormValidator"/>
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix = "/WEB-INF/pages/"
+		p:suffix=".jsp"/>	
+	 	
+</beans>
